@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body class="grid-container">
-    <div>
-      <h1>El faro</h1>
+    <div class="logo">
+      <h1 class="titulo">El faro</h1>
       <img
         src="./archivos/imagenes/logo.jpeg"
         alt="titulo"
@@ -21,239 +24,167 @@
       />
     </div>
     <nav>
-      <!-- <ul> -->
       <li>
-        <a href="/">
-          Inicio
+        <a href="/"> Inicio </a>
+      </li>
+      <li>
+        <!-- al colocarle el # en el vinculo le decimos que se redirija a esa seccion de la pagina que se crea con un id -->
+        <a href="#deportes">
+          Deportes
         </a>
       </li>
-      <li>Deportes</li>
-      <li>Negocio</li>
-      <!-- </ul> -->
+      <li>
+        <a href="#negocios">
+          Negocio
+        </a>
+      </li>
     </nav>
-    <section>
-      <article>
-        <h3>Noticias</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Titulo</th>
-              <th>Categoria</th>
-              <th>Cuerpo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <h1>
-                  Taylor Swift gana la categoría de "Video del Año" en los MTV
-                  VMAs 2022 y anuncia nuevo álbum
-                </h1>
-              </td>
-              <td><p>Entretenimiento</p></td>
-              <td>
-                <p>
-                  Taylor Swift se llevó la categoría más importante de los MTV
-                  VMAs con el video musical de All Too Well, que ella misma
-                  dirigió. La cantante de country pop, compitió con artistas
-                  como Ed Sheeran, Olivia Rodrigo, Doja Cat, Harry Styles, entre
-                  otros.
-                </p>
-                <video controls>
-                  <source src="./archivos/videos/video.mp4" type="video/mp4" />
-                </video>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h1>
-                  ¡Sorpresa! Arctic Monkeys regresa con nueva canción + video
-                  musical de su próximo disco
-                </h1>
-              </td>
-              <td><p>Entretenimiento</p></td>
-              <td>
-                <p>
-                  Tras anunciar su próximo disco titulado The Car, ahora Arctic
-                  Monkeys estrenó una nueva canción y video musical
-                  correspondiente a ese séptimo álbum con el que prometen
-                  regresar a la música tras cuatro años.
-                </p>
-                <audio controls>
-                  <source src="./archivos/audio/audio.mpeg" type="audio/mpeg" />
-                </audio>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h1>
-                  Recta final: Apruebo y Rechazo alistan actos de cierre de
-                  campaña
-                </h1>
-              </td>
-              <td>Nacional</td>
-              <td>
-                <p>
-                  Los comandos de ambas opciones organizaron eventos masivos
-                  para el jueves con diversos artistas. Esto, previo al inicio
-                  del silencio electoral que debe regir hasta la votación. En el
-                  Rechazo hubo críticas a la negativa de la municipalidad de
-                  Santiago a entregar permisos para realizar su acto.
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
+    <section id="principal">
+      <h3>Noticias</h3>
+     <div class="grilla">
+        <article>
+          <h2>
+            Taylor Swift gana la categoría de "Video del Año" en los MTV VMAs 2022
+            y anuncia nuevo álbum
+          </h2>
+          <p>Entretenimiento</p>
+          <div class="">
+            <p>
+              Taylor Swift se llevó la categoría más importante de los MTV VMAs
+              con el video musical de All Too Well, que ella misma dirigió. La
+              cantante de country pop, compitió con artistas como Ed Sheeran,
+              Olivia Rodrigo, Doja Cat, Harry Styles, entre otros.
+            </p>
+            <video controls>
+              <source src="./archivos/videos/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </article>
+        <article>
+          <h2>
+            ¡Sorpresa! Arctic Monkeys regresa con nueva canción + video musical de
+            su próximo disco
+          </h2>
+          <p>Entretenimiento</p>
+          <div class="">
+            <p>
+              Tras anunciar su próximo disco titulado The Car, ahora Arctic
+              Monkeys estrenó una nueva canción y video musical correspondiente a
+              ese séptimo álbum con el que prometen regresar a la música tras
+              cuatro años.
+            </p>
+            <audio controls>
+              <source src="./archivos/audio/audio.mpeg" type="audio/mpeg" />
+            </audio>
+          </div>
+        </article>
+        <article>
+          <h2>
+            Recta final: Apruebo y Rechazo alistan actos de cierre de campaña
+          </h2>
+          <p>Nacional</p>
+          <div class="">
+            <p>
+              Los comandos de ambas opciones organizaron eventos masivos para el
+              jueves con diversos artistas. Esto, previo al inicio del silencio
+              electoral que debe regir hasta la votación. En el Rechazo hubo
+              críticas a la negativa de la municipalidad de Santiago a entregar
+              permisos para realizar su acto.
+            </p>
+          </div>
+        </article>
+  
+      
+     </div>
     </section>
-    <section>
-      <article>
-        <h3>Deporte</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Titulo</th>
-              <th>Categoria</th>
-              <th>Cuerpo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><h1>Serena Williams ganó en su estreno en el US Open</h1></td>
-              <td><p>Deportes</p></td>
-              <td>
-                <p>
-                  La tenista estounidense, contra todo pronóstico venció en la
-                  primera ronda del Abierto de Estados Unidos y se vio mucho
-                  mejor físicamente que en Toronto y Cincinnati.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h1>
-                  Impresionante: Joaquín Niemann se cambia del PGA a la LIV de
-                  Arabia Saudita a cambio de 100 millones de dólares
-                </h1>
-              </td>
-              <td><p>Deportes</p></td>
-              <td>
-                <p>
-                  Joaquín Niemann, el mejor golfista chileno de la historia con
-                  sólo 23 años, dará un violento giro en su carrera a partir del
-                  jueves, cuando se anuncia su primera aparición en el LIV Golf
-                  Invitational Series
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h1>
-                  Deportes Copiapó contra Deportes Recoleta: Dónde ver el
-                  partido de hoy
-                </h1>
-              </td>
-              <td><p>Deportes</p></td>
-              <td>
-                <p>
-                  Hoy lunes 29 de agosto Deportes Copiapó que está quinto en la
-                  tabla y que sólo necesita tres puntos dado que Barnechea -que
-                  está séptimo con 23 unidades- lo podría igualar en la pelea
-                  por un cupo en la liguilla, se enfrentará a Deportes Recoleta
-                  por la fecha 26 del torneo en la Primera B de Chile, el cual
-                  se realizará en el estadio Luis Valenzuela Hermosilla a las
-                  20:30 horas. Asimismo, el partido se transmitirá en vivo a
-                  través de la señal de TNT Sports HD.
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
+
+    <!-- creamos una seccion de la pagina con el id, en este caso creamos la seccion de deportes -->
+    <section id="deportes">
+      <h3>Deportes</h3>
+      <div class="grilla">
+        <article>
+          <h2>Serena Williams ganó en su estreno en el US Open</h2>
+          <p>Deportes</p>
+          <div class=""><p>
+            La tenista estounidense, contra todo pronóstico venció en la
+            primera ronda del Abierto de Estados Unidos y se vio mucho
+            mejor físicamente que en Toronto y Cincinnati.
+          </p></div>
+        </article>
+        <article>
+          <h2>Impresionante: Joaquín Niemann se cambia del PGA a la LIV de
+            Arabia Saudita a cambio de 100 millones de dólares</h2>
+          <p>Deportes</p>
+          <div class="">
+            <p>
+              Joaquín Niemann, el mejor golfista chileno de la historia con
+              sólo 23 años, dará un violento giro en su carrera a partir del
+              jueves, cuando se anuncia su primera aparición en el LIV Golf
+              Invitational Series
+            </p>
+          </div>
+        </article>
+        <article>
+          <h2>Deportes Copiapó contra Deportes Recoleta: Dónde ver el
+            partido de hoy</h2>
+            <p>Deportes</p>
+            <div class="">Hoy lunes 29 de agosto Deportes Copiapó que está quinto en la
+              tabla y que sólo necesita tres puntos dado que Barnechea -que
+              está séptimo con 23 unidades- lo podría igualar en la pelea
+              por un cupo en la liguilla, se enfrentará a Deportes Recoleta
+              por la fecha 26 del torneo en la Primera B de Chile, el cual
+              se realizará en el estadio Luis Valenzuela Hermosilla a las
+              20:30 horas. Asimismo, el partido se transmitirá en vivo a
+              través de la señal de TNT Sports HD.</div>
+        </article>
+      </div>
     </section>
-    <section>
+
+    <section id="negocios">
       <h3>Negocios</h3>
-      <article>
-        <table>
-          <thead>
-            <tr>
-              <th>Titulo</th>
-              <th>Categoria</th>
-              <th>Cuerpo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <h1>
-                  Inflación, desaceleración y alza de tasas golpean el negocio
-                  de crédito de la banca en julio
-                </h1>
-              </td>
-              <td><p>Negocios</p></td>
-              <td>
-                <p>
-                  La función de copiar y pegar los contenidos del Diario
-                  Financiero es exclusiva de los usuarios DF Full. Si está
-                  suscrito ingrese con su clave y podrá hacerlo. Si no cuenta
-                  con suscripción puede suscribirse llamando al 23391048 o
-                  escribiendo a suscripciones@df.cl De otra manera queda
-                  expresamente prohibida la publicación, retransmisión,
-                  distribución, venta, edición y cualquier otro uso de los
-                  contenidos (Incluyendo, pero no limitado a, contenido, texto,
-                  fotografías, audios, videos y logotipos). Muchas gracias.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h1>
-                  Scotiabank lanza iniciativa que promueve el liderazgo femenino
-                  en los negocios
-                </h1>
-              </td>
-              <td><p>Negocios</p></td>
-              <td>
-                <p>
-                  El programa busca promover la equidad de género, facilitando
-                  accesos a financiamiento, educación y mentorías a mujeres que
-                  lideran empresas. En el lanzamiento participaron más de 100
-                  ejecutivas y empresarias.
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h1>
-                  La función de copiar y pegar los contenidos del Diario
-                  Financiero es exclusiva de los usuarios DF Full. Si está
-                  suscrito ingrese con su clave y podrá hacerlo. Si no cuenta
-                  con suscripción puede suscribirse llamando al 23391048 o
-                  escribiendo a suscripciones@df.cl De otra manera queda
-                  expresamente prohibida la publicación, retransmisión,
-                  distribución, venta, edición y cualquier otro uso de los
-                  contenidos (Incluyendo, pero no limitado a, contenido, texto,
-                  fotografías, audios, videos y logotipos). Muchas gracias.
-                </h1>
-              </td>
-              <td><p>Negocios</p></td>
-              <td>
-                <p>
-                  La función de copiar y pegar los contenidos del Diario
-                  Financiero es exclusiva de los usuarios DF Full. Si está
-                  suscrito ingrese con su clave y podrá hacerlo. Si no cuenta
-                  con suscripción puede suscribirse llamando al 23391048 o
-                  escribiendo a suscripciones@df.cl De otra manera queda
-                  expresamente prohibida la publicación, retransmisión,
-                  distribución, venta, edición y cualquier otro uso de los
-                  contenidos (Incluyendo, pero no limitado a, contenido, texto,
-                  fotografías, audios, videos y logotipos). Muchas gracias.
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
+      <div class="grilla">
+        <article>
+          <h2>Inflación, desaceleración y alza de tasas golpean el negocio
+            de crédito de la banca en julio</h2>
+            <p>Negocios</p>
+            <div class="">p>
+              La función de copiar y pegar los contenidos del Diario
+              Financiero es exclusiva de los usuarios DF Full. Si está
+              suscrito ingrese con su clave y podrá hacerlo. Si no cuenta
+              con suscripción puede suscribirse llamando al 23391048 o
+              escribiendo a suscripciones@df.cl De otra manera queda
+              expresamente prohibida la publicación, retransmisión,
+              distribución, venta, edición y cualquier otro uso de los
+              contenidos (Incluyendo, pero no limitado a, contenido, texto,
+              fotografías, audios, videos y logotipos). Muchas gracias.
+            </p></div>
+        </article>
+        <article>
+          <h2>Scotiabank lanza iniciativa que promueve el liderazgo femenino
+            en los negocios</h2>
+            <p>Negocios</p>
+            <div class=""><p>El programa busca promover la equidad de género, facilitando
+              accesos a financiamiento, educación y mentorías a mujeres que
+              lideran empresas. En el lanzamiento participaron más de 100
+              ejecutivas y empresarias.</p></div>
+        </article>
+        <article>
+          <h2>Bed Bath & Beyond: el suicidio de un alto ejecutivo que puso el foco en la grave crisis que atraviesa la cadena de tiendas de EE.UU.</h2>
+          <p>Negocios</p>
+          <div class="">
+            <p>
+              La trágica muerte de uno de los ejecutivos de origen latino de más alto rango en Estados Unidos, Gustavo Arnal, ha puesto de relieve la grave crisis que atraviesa una de las cadenas más famosas de ese país: Bed Bath & Beyond.
+            </p>
+            <p>
+              El empresario venezolano de 52 años, quien era director financiero (CFO en inglés) de la empresa de artículos para el hogar, murió el viernes en Nueva York tras caer desde el balcón de su apartamento en el piso 18 de un rascacielos en Manhattan.
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
+
+    <footer>
+      Este es nuestro footer
+    </footer>
   </body>
 </html>
