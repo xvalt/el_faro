@@ -14,6 +14,7 @@
     <title>Document</title>
   </head>
   <body class="grid-container">
+    <div class="fecha" id="fecha">20/02/09 10:00:00</div>
     <div class="logo">
       <h1 class="titulo">El faro</h1>
       <img
@@ -39,6 +40,21 @@
         </a>
       </li>
     </nav>
+
+    <form id="formularioAgregarNoticia" class="formulario">
+      <h3>Agregar noticia</h3>
+      <label for="">Titulo</label>
+      <input type="text" id="titulo" required>
+      <label for="">Descripcion</label>
+      <textarea name="" id="descripcion" rows="5" required></textarea>
+      <input type="submit" value="Agregar" class="boton">
+    </form>
+    <section id="generados">
+      <h3>Noticias generadas <span id="cantidadNoticias"></span></h3>
+     <div class="grilla" id="grillaNoticiasGeneradas">
+      <p>No hay noticias generadas</p>
+     </div>
+    </section>
     <section id="principal">
       <h3>Noticias</h3>
      <div class="grilla">
@@ -183,8 +199,19 @@
       </div>
     </section>
 
+    <form class="formulario">
+      <h3>Contacto</h3>
+      <label for="">Nombre</label>
+      <input type="text" id="nombre" required>
+      <label for="">Mensaje</label>
+      <textarea name="" id="mensaje" rows="5" required></textarea>
+      <input type="submit" value="Enviar mensaje" class="boton">
+    </form>
+    
     <footer>
       Este es nuestro footer
     </footer>
+
+    <script src="./scripts.js"></script>
   </body>
 </html>

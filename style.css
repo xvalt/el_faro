@@ -8,6 +8,7 @@ body {
 }
 body {
     background-color: #f5f5f5;
+    padding: 10px;
 }
 
 .titulo {
@@ -22,8 +23,14 @@ article {
 .grilla {
     display: grid;
     /* queremos 3 bloques de igual tamaño por lo que le colocamos 1fr y se repita 3 veces */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+}
+
+@media (min-width: 1000px) {
+    .grilla {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* el hover es la clase que le indica que agregue estos estilos solo cuando el mouse pasa por encima */
@@ -34,7 +41,7 @@ article:hover {
 
 /* le colocamos un width para que no se desborde de el bloque */
 video {
-    width: 400px;
+    width: 100%;
 }
 
 footer {
@@ -63,4 +70,31 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+.fecha {
+    text-align: center;
+}
+
+.formulario {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 400px;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+.boton {
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
 }
