@@ -1,217 +1,281 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body class="grid-container">
-    <div class="fecha" id="fecha">20/02/09 10:00:00</div>
-    <div class="logo">
-      <h1 class="titulo">El faro</h1>
-      <img
-        src="./archivos/imagenes/logo.jpeg"
-        alt="titulo"
-        width="100"
-        height="100"
-      />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body class="">
+  <div class="text-light text-center position-fixed top-0 start-0 end-0 bg-dark" style="z-index:1000">
+    <div class="fs-6 py-1" id="fecha">20/02/09 10:00:00</div>
+  </div>
+  <nav class="navbar navbar-expand-md bg-light" style="margin-top: 32px;">
+    <div class="container-fluid">
+      <div class="navbar-brand m-0 fw-semibold" href="#">
+        <img src="./archivos/imagenes/logo.png" alt="titulo" width="40" height="40" />
+        <span class="fs-3">El faro</span>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 ms-md-2">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar +</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <form action="" id="formularioAgregar">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label class="form-label">Tipo</label>
+                    <select class="form-select" id="selectTipo" aria-label="Default select example">
+                      <option value="1">Noticia</option>
+                      <option value="2">Aviso</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="txtTitulo">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Categoria</label>
+                    <select class="form-select" id="selectCategoria" aria-label="Default select example">
+                      <option value="internacional">Internacional</option>
+                      <option value="nacional">Nacional</option>
+                      <option value="deportes">Deportes</option>
+                      <option value="economia">Economia</option>
+                      <option value="cultura">Cultura</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Descripcion</label>
+                    <textarea id="txtDescripcion" rows="3" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Agregar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <nav>
-      <li>
-        <a href="/"> Inicio </a>
-      </li>
-      <li>
-        <!-- al colocarle el # en el vinculo le decimos que se redirija a esa seccion de la pagina que se crea con un id -->
-        <a href="#deportes">
-          Deportes
-        </a>
-      </li>
-      <li>
-        <a href="#negocios">
-          Negocio
-        </a>
-      </li>
-    </nav>
+  </nav>
 
-    <form id="formularioAgregarNoticia" class="formulario">
-      <h3>Agregar noticia</h3>
-      <label for="">Titulo</label>
-      <input type="text" id="titulo" required>
-      <label for="">Descripcion</label>
-      <textarea name="" id="descripcion" rows="5" required></textarea>
-      <input type="submit" value="Agregar" class="boton">
-    </form>
-    <section id="generados">
-      <h3>Noticias generadas <span id="cantidadNoticias"></span></h3>
-     <div class="grilla" id="grillaNoticiasGeneradas">
-      <p>No hay noticias generadas</p>
-     </div>
-    </section>
-    <section id="principal">
-      <h3>Noticias</h3>
-     <div class="grilla">
-        <article>
-          <h2>
-            Taylor Swift gana la categoría de "Video del Año" en los MTV VMAs 2022
-            y anuncia nuevo álbum
-          </h2>
-          <p>Entretenimiento</p>
-          <div class="">
-            <p>
-              Taylor Swift se llevó la categoría más importante de los MTV VMAs
-              con el video musical de All Too Well, que ella misma dirigió. La
-              cantante de country pop, compitió con artistas como Ed Sheeran,
-              Olivia Rodrigo, Doja Cat, Harry Styles, entre otros.
-            </p>
-            <video controls>
-              <source src="./archivos/videos/video.mp4" type="video/mp4" />
-            </video>
+  <div class="px-4 mt-4">
+    <div class="row">
+      <div class="col-12 col-md-9">
+        <h3 class="fs-5">Ultimas noticias</h3>
+        <div class="row mt-4">
+          <div class="col-12 col-md-6" id="ultima-noticia-1">
+            <article class="border rounded p-2">
+              <h2 class="fs-4 m-0">Titulo noticia</h2>
+              <span class="" style="font-size: 12px;">Internacional</span>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta pariatur magni cupiditate perspiciatis
+                obcaecati ipsum</p>
+            </article>
           </div>
-        </article>
-        <article>
-          <h2>
-            ¡Sorpresa! Arctic Monkeys regresa con nueva canción + video musical de
-            su próximo disco
-          </h2>
-          <p>Entretenimiento</p>
-          <div class="">
-            <p>
-              Tras anunciar su próximo disco titulado The Car, ahora Arctic
-              Monkeys estrenó una nueva canción y video musical correspondiente a
-              ese séptimo álbum con el que prometen regresar a la música tras
-              cuatro años.
-            </p>
-            <audio controls>
-              <source src="./archivos/audio/audio.mpeg" type="audio/mpeg" />
-            </audio>
+          <div class="col-12 col-md-6" id="ultima-noticia-2">
+            <article class="border rounded p-2">
+              <h2 class="fs-4 m-0">Titulo noticia</h2>
+              <span class="" style="font-size: 12px;">Internacional</span>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta pariatur magni cupiditate perspiciatis
+                obcaecati ipsum</p>
+            </article>
           </div>
-        </article>
-        <article>
-          <h2>
-            Recta final: Apruebo y Rechazo alistan actos de cierre de campaña
-          </h2>
-          <p>Nacional</p>
-          <div class="">
-            <p>
-              Los comandos de ambas opciones organizaron eventos masivos para el
-              jueves con diversos artistas. Esto, previo al inicio del silencio
-              electoral que debe regir hasta la votación. En el Rechazo hubo
-              críticas a la negativa de la municipalidad de Santiago a entregar
-              permisos para realizar su acto.
-            </p>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 col-md-4" id="ultima-noticia-3">
+            <article class="border rounded p-2">
+              <h2 class="fs-4 m-0">Titulo noticia</h2>
+              <span class="" style="font-size: 12px;">Internacional</span>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta pariatur magni cupiditate perspiciatis
+                obcaecati ipsum</p>
+            </article>
           </div>
-        </article>
-  
-      
-     </div>
-    </section>
+          <div class="col-12 col-md-4" id="ultima-noticia-4">
+            <article class="border rounded p-2">
+              <h2 class="fs-4 m-0">Titulo noticia</h2>
+              <span class="" style="font-size: 12px;">Internacional</span>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta pariatur magni cupiditate perspiciatis
+                obcaecati ipsum</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4" id="ultima-noticia-5">
+            <article class="border rounded p-2">
+              <h2 class="fs-4 m-0">Titulo noticia</h2>
+              <span class="" style="font-size: 12px;">Internacional</span>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta pariatur magni cupiditate perspiciatis
+                obcaecati ipsum</p>
+            </article>
+          </div>
 
-    <!-- creamos una seccion de la pagina con el id, en este caso creamos la seccion de deportes -->
-    <section id="deportes">
-      <h3>Deportes</h3>
-      <div class="grilla">
-        <article>
-          <h2>Serena Williams ganó en su estreno en el US Open</h2>
-          <p>Deportes</p>
-          <div class=""><p>
-            La tenista estounidense, contra todo pronóstico venció en la
-            primera ronda del Abierto de Estados Unidos y se vio mucho
-            mejor físicamente que en Toronto y Cincinnati.
-          </p></div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 border rounded p-2">
+        <h3 class="fs-5">Avisos</h3>
+        <div class="mt-3" id="data-avisos">
+          <article class="lh-sm">
+            <h2 class="fs-6 m-0">Nuevo aviso</h2>
+            <span class="" style="font-size: 12px;">Internacional</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur a unde. Quod magnam
+              corporis.</p>
+          </article>
+          <hr>
+          <article>
+            <h2 class="fs-6 m-0">Nuevo aviso</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur a unde. Quod magnam
+              corporis.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="px-4">
+    <section class="mt-5">
+      <h2 class="fs-4">Noticias internacionales</h2>
+      <div id="data-internacional" class="row">
+        <article class="col-12 col-md-4 border rounded p-2">
+          <h2 class="fs-5 m-0">Taylor Swift gana la categoría de "Video del Año" en los MTV VMAs 2022</h2>
+          <span style="font-size: 12px;">Internacional</span>
+          <p>Taylor Swift se llevó la categoría más importante de los MTV VMAs
+            con el video musical de All Too Well, que ella misma dirigió. La
+            cantante de country pop, compitió con artistas como Ed Sheeran,
+            Olivia Rodrigo, Doja Cat, Harry Styles, entre otros.
+          </p>
         </article>
-        <article>
-          <h2>Impresionante: Joaquín Niemann se cambia del PGA a la LIV de
-            Arabia Saudita a cambio de 100 millones de dólares</h2>
-          <p>Deportes</p>
-          <div class="">
-            <p>
-              Joaquín Niemann, el mejor golfista chileno de la historia con
-              sólo 23 años, dará un violento giro en su carrera a partir del
-              jueves, cuando se anuncia su primera aparición en el LIV Golf
-              Invitational Series
-            </p>
-          </div>
-        </article>
-        <article>
-          <h2>Deportes Copiapó contra Deportes Recoleta: Dónde ver el
-            partido de hoy</h2>
-            <p>Deportes</p>
-            <div class="">Hoy lunes 29 de agosto Deportes Copiapó que está quinto en la
-              tabla y que sólo necesita tres puntos dado que Barnechea -que
-              está séptimo con 23 unidades- lo podría igualar en la pelea
-              por un cupo en la liguilla, se enfrentará a Deportes Recoleta
-              por la fecha 26 del torneo en la Primera B de Chile, el cual
-              se realizará en el estadio Luis Valenzuela Hermosilla a las
-              20:30 horas. Asimismo, el partido se transmitirá en vivo a
-              través de la señal de TNT Sports HD.</div>
+        <article class="col-12 col-md-4 border rounded p-2">
+          <h2 class="fs-5 m-0">¡Sorpresa! Arctic Monkeys regresa con nueva canción + video musical de
+            su próximo disco</h2>
+          <span style="font-size: 12px;">Internacional</span>
+          <p>Tras anunciar su próximo disco titulado The Car, ahora Arctic
+            Monkeys estrenó una nueva canción y video musical correspondiente a
+            ese séptimo álbum con el que prometen regresar a la música tras
+            cuatro años.</p>
         </article>
       </div>
     </section>
-
-    <section id="negocios">
-      <h3>Negocios</h3>
-      <div class="grilla">
-        <article>
-          <h2>Inflación, desaceleración y alza de tasas golpean el negocio
-            de crédito de la banca en julio</h2>
-            <p>Negocios</p>
-            <div class="">p>
-              La función de copiar y pegar los contenidos del Diario
-              Financiero es exclusiva de los usuarios DF Full. Si está
-              suscrito ingrese con su clave y podrá hacerlo. Si no cuenta
-              con suscripción puede suscribirse llamando al 23391048 o
-              escribiendo a suscripciones@df.cl De otra manera queda
-              expresamente prohibida la publicación, retransmisión,
-              distribución, venta, edición y cualquier otro uso de los
-              contenidos (Incluyendo, pero no limitado a, contenido, texto,
-              fotografías, audios, videos y logotipos). Muchas gracias.
-            </p></div>
+    <section class="mt-5">
+      <h2 class="fs-4">Noticias nacionales</h2>
+      <div id="data-nacional" class="row">
+        <article class="col-12 col-md-4 border rounded p-2">
+          <h2 class="fs-5 m-0">Recta final: Apruebo y Rechazo alistan actos de cierre de campaña</h2>
+          <span style="font-size: 12px;">Nacional</span>
+          <p>Los comandos de ambas opciones organizaron eventos masivos para el
+            jueves con diversos artistas.</p>
         </article>
-        <article>
-          <h2>Scotiabank lanza iniciativa que promueve el liderazgo femenino
-            en los negocios</h2>
-            <p>Negocios</p>
-            <div class=""><p>El programa busca promover la equidad de género, facilitando
-              accesos a financiamiento, educación y mentorías a mujeres que
-              lideran empresas. En el lanzamiento participaron más de 100
-              ejecutivas y empresarias.</p></div>
+        <article class="col-12 col-md-4 border rounded p-2">
+          <h2 class="fs-5 m-0">Nuevo aviso</h2>
+          <span style="font-size: 12px;">Nacional</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur a unde. Quod magnam
+            corporis.</p>
         </article>
-        <article>
-          <h2>Bed Bath & Beyond: el suicidio de un alto ejecutivo que puso el foco en la grave crisis que atraviesa la cadena de tiendas de EE.UU.</h2>
-          <p>Negocios</p>
-          <div class="">
-            <p>
-              La trágica muerte de uno de los ejecutivos de origen latino de más alto rango en Estados Unidos, Gustavo Arnal, ha puesto de relieve la grave crisis que atraviesa una de las cadenas más famosas de ese país: Bed Bath & Beyond.
-            </p>
-            <p>
-              El empresario venezolano de 52 años, quien era director financiero (CFO en inglés) de la empresa de artículos para el hogar, murió el viernes en Nueva York tras caer desde el balcón de su apartamento en el piso 18 de un rascacielos en Manhattan.
-            </p>
-          </div>
+        <article class="col-12 col-md-4 border rounded p-2">
+          <h2 class="fs-5 m-0">Nuevo aviso</h2>
+          <span style="font-size: 12px;">Nacional</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur a unde. Quod magnam
+            corporis.</p>
         </article>
       </div>
     </section>
+    <section class="mt-5">
+      <h2 class="fs-4">Noticias deportivas</h2>
+      <div id="data-deportes" class="row"></div>
+    </section>
+    <section class="mt-5">
+      <h2 class="fs-4">Noticias economicas</h2>
+      <div id="data-economia" class="row"></div>
+    </section>
+    <section class="mt-5">
+      <h2 class="fs-4">Noticias culturales</h2>
+      <div id="data-cultura" class="row"></div>
+    </section>
+  </div>
+  <hr>
+  <div class="container-fluid  py-5">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6">
+        <h3>Contacto</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi modi consectetur harum perferendis. Quo
+          voluptate aliquam consequatur aut debitis enim, atque inventore facere.</p>
+      </div>
+      <div class="col-12 col-md-6">
 
-    <form class="formulario">
-      <h3>Contacto</h3>
-      <label for="">Nombre</label>
-      <input type="text" id="nombre" required>
-      <label for="">Mensaje</label>
-      <textarea name="" id="mensaje" rows="5" required></textarea>
-      <input type="submit" value="Enviar mensaje" class="boton">
-    </form>
-    
-    <footer>
-      Este es nuestro footer
-    </footer>
+        <form class="border p-4 rounded">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Mensaje</label>
+            <textarea  id="mensaje" rows="3" class="form-control"></textarea>
+          </div>
+          <input type="submit" value="Enviar mensaje" class="btn btn-secondary btn-block">
+        </form>
+      </div>
+    </div>
 
-    <script src="./scripts.js"></script>
-  </body>
+  </div>
+
+  <footer class="bg-secondary text-white p-5 text-center">
+    Este es nuestro footer
+    <div class="row mt-4">
+      <div class="col-12 col-md-4">
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+      </div>
+      <div class="col-12 col-md-4">
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+      </div>
+      <div class="col-12 col-md-4">
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="./scripts.js"></script>
+</body>
+
 </html>
